@@ -5,6 +5,10 @@ import Landing from './Campushaven.jsx'
 import Login from './Login.jsx'
 import Test from './test.jsx'
 import Signupoption from './Signupoption.jsx'
+import Register from './Createaccount.jsx'
+import Create from './Createaccount_phone.jsx'
+import Verifyphone from './Verifyphone.jsx'
+
 
 
 export default function App() {
@@ -15,6 +19,9 @@ export default function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/test' element={<Test/>}/>
         <Route path='/signup_option' element={<Signupoption/>}/>
+        <Route path='/create_account' element={<Register/>}/>
+        <Route path='/create_phoneaccount' element={<Create/>}/>
+        <Route path='/verify_phone' element={<Verifyphone/>}/>
     </Routes>
   )
 }

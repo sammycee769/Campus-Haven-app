@@ -98,7 +98,7 @@ export default function GetStarted() {
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-20 w-full flex justify-center z-10 space-x-2">
+      <div className="absolute bottom-20 w-full flex justify-center  z-10 space-x-2">
   {slides.map((_, idx) => (
     <button
       key={idx}
@@ -107,7 +107,7 @@ export default function GetStarted() {
         setAutoSlide(false);
       }}
       className={`w-3 h-3 rounded-full transition-all duration-300 ${
-        currentSlide === idx ? 'bg-black text-white scale-110' : 'bg-gray-400'
+        currentSlide === idx ? 'bg-blue-600 text-white scale-110' : 'bg-blue-400'
       }`}
     ></button>
   ))}
@@ -117,7 +117,7 @@ export default function GetStarted() {
       <div className="absolute bottom-6 w-full flex justify-center z-10">
         <button
           onClick={handleNext}
-          className="px-32 py-2 rounded bg-black text-white font-medium hover:bg-blue-200 transition disabled:opacity-50"
+          className="px-32 py-2 rounded bg-orange-400 text-white font-medium hover:bg-blue-200 transition disabled:opacity-50"
         >
        {currentSlide === slides.length - 1 ? 'Finish' : 'Next'}
       </button>

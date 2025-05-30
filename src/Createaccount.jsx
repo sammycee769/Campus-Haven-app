@@ -28,16 +28,17 @@ const RegisterForm = () => {
 
   const handleNext = () => {
     if (isFormValid) {
-      navigate("/login"); 
+      navigate("/verify_email"); 
     }
   };
 
   return (
     <>
     <div className='m-4 mb-0'>
-            <div className='flex justify-between p-4 pb-0 font-bold font-serif'>
-                CampusHaven
+            <div className='flex text-blue-600 justify-between p-4 pb-0 font-bold font-serif'>
+               CampusHaven
             </div>
+            <hr class="border-t border-gray-600"/>
     </div>
     <div className="min-h-screen flex flex-col items-center justify-center px-4">
       <div className="w-full max-w-md p-6 rounded-lg shadow-md">
@@ -123,7 +124,7 @@ const RegisterForm = () => {
           onClick={handleNext}
           disabled={!isFormValid}
           className={`w-full py-3 text-white rounded-md mb-4 ${
-            isFormValid ? "bg-black hover:bg-gray-800" : "bg-gray-500 cursor-not-allowed"
+            isFormValid ? "bg-orange-400  hover:bg-gray-800" : "bg-gray-500 cursor-not-allowed"
           }`}
         >
           Next
@@ -148,7 +149,7 @@ const RegisterForm = () => {
 
         <p className="text-black text-sm text-center mt-6">
           Are you a <span className="font-semibold">LANDLORD/AGENT ?</span>{" "}
-          <span className="text-orange-500 font-semibold cursor-pointer">Sign Up</span>
+          <span className="text-orange-500 font-semibold cursor-pointer"></span>
         </p>
       </div>
     </div>

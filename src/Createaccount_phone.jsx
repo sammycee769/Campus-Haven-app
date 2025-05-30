@@ -201,7 +201,7 @@ export default function Createaccount_phone() {
         <p className="text-black text-sm text-center mt-6">
           Are you a <span className="font-semibold">LANDLORD/AGENT ?</span>{" "}
           <span className="font-semibold underline cursor-pointer">
-            Sign Up
+          <a href="/landlordsignup">Sign Up</a>
           </span>
         </p>
       </form>

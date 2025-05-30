@@ -22,7 +22,7 @@ export default function Signupoption() {
    
         <h2 className="text-xl font-semibold mb-6">Choose an option to sign Up</h2>
 
-        <button className="flex items-center justify-center gap-2 w-full border border-blue-500 py-3 mb-4 rounded-md text-black hover:bg-white">
+        <button className="flex items-center justify-center gap-2 w-full border border-blue-500 py-3 mb-4 rounded-md text-black h hover:bg-gray-300">
           <FaEnvelope className="text-blue-600"/>
           <a href="/create_account"> Sign Up with your email</a>
         </button>
@@ -55,7 +55,7 @@ export default function Signupoption() {
 
         <p className="text-black text-sm">
           Are you a <span className="font-semibold">LANDLORD/AGENT ?</span>{" "}
-          <span className="text-orange-500 font-semibold cursor-pointer">Sign Up</span>
+          <span className="text-orange-500 font-semibold cursor-pointer"><a href="/landlordsignup">Sign Up</a></span>
         </p>
       </div>
     {/* </div> */}

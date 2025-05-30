@@ -20,16 +20,17 @@ const handleKeyDown = (e, index) => {
 
 return (
     <>
-     <div className='m-4 mb-0'>
-            <div className='flex justify-between p-4 pb-0 font-bold font-serif'>
-                CampusHaven
+ <div className='m-4 mb-0'>
+            <div className='flex text-blue-600 justify-between p-4 pb-0 font-bold font-serif'>
+               CampusHaven
             </div>
+            <hr class="border-t border-gray-600"/>
     </div>
-    <div className="min-h-screen bg-gray-200 ">
+    <div className="min-h-screen  ">
       <div className=" w-full max-w-md p-6 ">
-        <h1 className="text-2xl font-bold text-gray-800 mb-1">Verify your phone number</h1>
+        <h1 className="text-2xl font-bold text-gray-800 mb-1">Verify your email address</h1>
         <p className="mb-4 text-gray-700">
-          Enter the 6 digit verification code sent to your phone number 
+          Enter the 6 digit verification code sent to your email address 
         </p>
   <div className="flex space-x-2 mb-4">
     {Array.from({ length: 6 }).map((_, index) => (
@@ -46,11 +47,11 @@ return (
   </div>
   <p className="">Didn't receive code?</p>
   <div className="mt-36 mb-4">
-  <button className="`mt-6 w-full p-3 text-white bg-black hover:bg-gray-500  rounded ">
+  <button className="`mt-6 w-full p-3 text-white bg-orange-400  hover:bg-black rounded ">
     <a href="">Verify</a>
   </button>
   </div>
-  <p className="pl-8"> Not your number? <a href="/create_phoneaccount">edit to receive code</a></p>
+  <p className="pl-8 "> Not your email?  <a href="/create_account">Edit to receive code</a></p>
   </div>
   </div>
     </>

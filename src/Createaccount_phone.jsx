@@ -130,7 +130,7 @@ export default function Createaccount_phone() {
           <li className={hasSpecialChar ? "text-green-600" : "text-gray-500"}>
             A special character (e.g. !, @, #)
           </li>
-        </ul>
+        </ul>   
         {passwordError && (
           <p className="text-red-500 text-sm mt-1">{passwordError}</p>
         )}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
+import StepIndicator from "./StepIndicator.jsx"
 
 export default function Step1() {
   const navigate = useNavigate();
@@ -51,6 +52,7 @@ export default function Step1() {
 
   return (
     <>
+    <StepIndicator />
      <div className='m-4 mb-0'>
            <div className='flex text-blue-600 justify-between p-4 pb-0 font-bold font-serif'>
                CampusHaven

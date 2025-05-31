@@ -2,6 +2,7 @@ import React from 'react'
 import { CiMail } from "react-icons/ci";
 import { FaEnvelope, FaPhone, FaApple, FaFacebookF} from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import img from './assets/onboardings.png'
 
 
 
@@ -18,7 +19,11 @@ export default function Signupoption() {
     {/* <div className="relative w-full h-screen bg-cover bg-gray-100 bg-center  text-black "> */}
     <div className="min-h-screen flex items-center justify-center ">
     <div className=" p-6 rounded-lg shadow-md w-full max-w-md text-center">
-    <CiMail className='mt-0 text-[350px]' style={{ width:'350px'}}/>
+    <img
+    src={img}
+    alt="slide"
+    className="w-3/3 p-4 max-w-md object-contain"
+  />
    
         <h2 className="text-xl font-semibold mb-6">Choose an option to sign Up</h2>
 

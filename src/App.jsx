@@ -11,6 +11,7 @@ import Verifyphone from './Verifyemail.jsx'
 import Verifyemail from './Verifyemails.jsx'
 import Landlordsignup from './Landlordsignup.jsx'
 import Forgotpasword from "./Forgotpasword.jsx"
+import Resetpasword from "./Passwordreset.jsx"
 
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
         <Route path='/verifyemail' element={<Verifyemail/>}/>
         <Route path='/landlordsignup' element={<Landlordsignup/>}/>
         <Route path="/forgotpassword" element={<Forgotpasword/>}/>
+        <Route path="/resetpassword" element={<Resetpasword/>}/>
     </Routes>
   )
 }

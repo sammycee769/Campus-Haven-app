@@ -16,14 +16,23 @@ export default function Forgotpasword() {
             <p className="mb-4 text-gray-700">
             input your email address to reset your password               
             </p>
-    
+            <form>
             <label className="block font-semibold mb-1">Email Address</label>
             <input
               type="email"
               placeholder="example@gmail.com"
               required
               className="w-full px-3 py-2 rounded-md border outline-none mb-4"
+              // name="email"
             />
+            </form>
+      <div className="mt-30 mb-4">
+  <button className="`mt-6 w-full p-3 text-white bg-orange-400  hover:bg-black rounded "
+  type="submit"
+  >
+    <a href="/resetpassword">Next</a>
+  </button>
+  </div>
     </div>
     </div>
     </>

@@ -2,7 +2,9 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
-import slide from './assets/mail2.png'
+import slide from './assets/onboarding .png'
+import slidez from './assets/onboardings.png'
+import slidess from './assets/onboardingss.png'
 
     const slides = [
         {
@@ -13,13 +15,13 @@ import slide from './assets/mail2.png'
           },
           {
             id: 2,
-            image: slide,
+            image: slidez,
             topCaption: 'Secure And Verified For Your Peace Of Mind',
             bottomCaption: 'Secure leases, connect with verified landlords and stay scam free.',
           },
           {
             id: 3,
-            image: slide,
+            image: slidess,
             topCaption: 'Creating A Listing For Your Property',
             bottomCaption: 'Showcase your property to the right tenants by creating a listing in just a few steps.',
           },
@@ -71,11 +73,15 @@ export default function GetStarted() {
         const current =slides[currentSlide];
     return (
       <>
-    <div
-      {...swipeHandlers}
-      className="relative w-full h-screen bg-cover bg-center flex flex-col items-center justify-center text-black"
-      style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
-    >
+   <div
+  {...swipeHandlers}
+  className="relative w-full h-screen flex flex-col items-center justify-center text-black"
+>
+  <img
+    src={slides[currentSlide].image}
+    alt="slide"
+    className="w-2/3 max-w-md object-contain"
+  />
       {/* Dark overlay */}
       {/* <div className="absolute inset-0 bg-black bg-opacity-40 z-0" /> */}
 

@@ -12,6 +12,13 @@ import Verifyemail from './Verifyemails.jsx'
 import Landlordsignup from './Landlordsignup.jsx'
 import Forgotpasword from "./Forgotpasword.jsx"
 import Resetpasword from "./Passwordreset.jsx"
+import Newpasword from "./Newpassword.jsx"
+import VerifyIdentity from "./Verifyidentity.jsx"
+// import Upload from "./Upload-nin.jsx"
+import ConfirmUpload from './ConfirmUpload';
+import UploadSuccess from './UploadSuccess';
+import UploadID from './UploadID';
+
 
 
 export default function App() {
@@ -29,6 +36,13 @@ export default function App() {
         <Route path='/landlordsignup' element={<Landlordsignup/>}/>
         <Route path="/forgotpassword" element={<Forgotpasword/>}/>
         <Route path="/resetpassword" element={<Resetpasword/>}/>
+        <Route path="/newpassword" element={<Newpasword/>}/>
+        <Route path="/verifyidentity" element={<VerifyIdentity/>}/>
+        {/* <Route path="/upload-nin" element={<Upload/>}/> */}
+        <Route path="/upload-id" element={<UploadID />} />
+        <Route path="/confirm-upload" element={<ConfirmUpload />} />
+        <Route path="/upload-success" element={<UploadSuccess />} />
+        
     </Routes>
   )
 }

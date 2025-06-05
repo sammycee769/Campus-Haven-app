@@ -6,12 +6,11 @@ export default function StepIndicator() {
   const steps = [
     { label: "Step 1", path: "/landlordsignup" },
     { label: "Step 2", path: "/verifyemail" },
-    { label: "Step 3", path: "/step3" }, // You can update this when you're ready
+    { label: "Step 3", path: "/verifyidentity" }, 
   ];
 
   const currentIndex = steps.findIndex((s) => s.path === location.pathname);
 
-  // If current page is not part of the stepper, don't render it
   if (currentIndex === -1) return null;
 
   return (

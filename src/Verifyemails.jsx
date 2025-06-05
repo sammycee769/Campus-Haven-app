@@ -50,10 +50,10 @@ return (
   <p className="">Didn't receive code?</p>
   <div className="mt-36 mb-4">
   <button className="`mt-6 w-full p-3 text-white bg-orange-400  hover:bg-black rounded ">
-    <a href="">Verify</a>
+    <a href="/verifyidentity">Verify</a>
   </button>
   </div>
-  <p className="pl-8 "> Not your email?  <a href="/create_account">Edit to receive code</a></p>
+  <p className="pl-8 "> Not your email?  <a href="/landlordsignup">Edit to receive code</a></p>
   </div>
   </div>
     </>

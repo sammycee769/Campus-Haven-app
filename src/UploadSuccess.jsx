@@ -11,8 +11,12 @@ export default function UploadSuccess() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-xl font-bold text-green-600 mb-2">Upload Successful</h1>
-          <p className="text-gray-700">Your ID has been uploaded successfully.</p>
+          <p className="text-gray-700 pb-4">Your ID has been uploaded successfully.</p>
+          <button className="`mt-6 w-full p-3 text-white bg-orange-400  hover:bg-black rounded ">
+           <a href="/location-prompt">Continue</a>
+          </button>
         </div>
+
       </div>
     </>
     );

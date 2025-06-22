@@ -15,9 +15,14 @@ import Resetpasword from "./Passwordreset.jsx"
 import Newpasword from "./Newpassword.jsx"
 import VerifyIdentity from "./Verifyidentity.jsx"
 // import Upload from "./Upload-nin.jsx"
-import ConfirmUpload from './ConfirmUpload';
-import UploadSuccess from './UploadSuccess';
-import UploadID from './UploadID';
+import ConfirmUpload from './ConfirmUpload.jsx';
+import UploadSuccess from './UploadSuccess.jsx';
+import UploadID from './UploadID.jsx';
+import LocationPrompt from './LocationPrompt.jsx';
+import ManualLocation from './ManualLocation.jsx';
+import PropertyShowcase from './Propertylisting.jsx'
+import PropertyPost from './PostProperty.jsx'
+import Home from './Home.jsx'
 
 
 
@@ -42,7 +47,11 @@ export default function App() {
         <Route path="/upload-id" element={<UploadID />} />
         <Route path="/confirm-upload" element={<ConfirmUpload />} />
         <Route path="/upload-success" element={<UploadSuccess />} />
-        
+        <Route path="/location-prompt" element={<LocationPrompt />} />
+        <Route path="/manual-location" element={<ManualLocation />} />
+        <Route path="/showcase" element={<PropertyShowcase />} />
+        <Route path="/postproperty" element={<PropertyPost />} />
+        <Route path="/home" element={<Home />} />
     </Routes>
   )
 }

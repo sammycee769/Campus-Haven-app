@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import StepIndicator from "./StepIndicator.jsx"
+import StepIndicator from "./Step.jsx"
 
 export default function Verifymail() {
     const inputsRef = useRef([]);

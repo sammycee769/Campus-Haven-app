@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
-import StepIndicator from "./StepIndicator.jsx"
+import StepIndicator from "./Step.jsx"
 
 export default function Step1() {
   const navigate = useNavigate();

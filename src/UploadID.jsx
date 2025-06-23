@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function UploadID() {
   const [file, setFile] = useState(null);
@@ -28,7 +28,7 @@ export default function UploadID() {
     <div className='m-4 mb-0'>
             <div className='flex text-blue-600 justify-between p-4 pb-0 font-bold font-serif'>
             CampusHaven
-            <a className="text-black underline" href="/verifyidentity">Go Back</a>
+            <Link to="/verifyidentity" className="text-black underline">Go Back</Link>
             </div>
             <hr class="border-t border-gray-600"/>
     </div>

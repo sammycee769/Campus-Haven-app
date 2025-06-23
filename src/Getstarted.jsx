@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
@@ -86,12 +87,9 @@ export default function GetStarted() {
       {/* <div className="absolute inset-0 bg-black bg-opacity-40 z-0" /> */}
 
       {/* Skip link */}
-      <a
-        href="/signup_option"
-        className="absolute top-4 right-6 text-sm text-black font-medium z-10 hover:underline"
-      >
-        Skip
-      </a>
+    
+      <Link to="/signup_option" className="absolute top-4 right-6 text-sm text-black font-medium z-10 hover:underline">Skip</Link>
+
 
        {/* Top caption */}
        <div className="absolute top-16 w-full p-3 text-center z-10">

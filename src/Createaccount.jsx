@@ -1,5 +1,5 @@
 import { React,useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link  } from "react-router-dom";
 import { FaEyeSlash, FaEye, FaApple, FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
@@ -44,7 +44,7 @@ const RegisterForm = () => {
       <div className="w-full max-w-md p-6 rounded-lg shadow-md">
         <h1 className="text-2xl font-bold text-gray-800 mb-1">Create your account</h1>
         <p className="mb-4 text-gray-700">
-          Already have an account ? <span className="font-semibold text-orange-400  cursor-pointer"><a href="/login">Login</a></span>
+          Already have an account ? <span className="font-semibold text-orange-400  cursor-pointer"><Link to="/login">Login in</Link></span>
         </p>
 
         <label className="block font-semibold mb-1">Email Address</label>
@@ -149,7 +149,7 @@ const RegisterForm = () => {
 
         <p className="text-black text-sm text-center mt-6">
           Are you a <span className="font-semibold">LANDLORD/AGENT ?</span>{" "}
-          <span className="text-orange-500 font-semibold cursor-pointer"><a href="/landlordsignup">Sign Up</a></span>
+          <span className="text-orange-500 font-semibold cursor-pointer"><Link to="/landlordsignup">Sign Up</Link></span>
         </p>
       </div>
     </div>

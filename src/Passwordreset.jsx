@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from 'react-router-dom'
 
 export default function Passwordreset()  {
     const inputsRef = useRef([]);
@@ -23,7 +24,7 @@ return (
  <div className='m-4 mb-0'>
             <div className='flex text-blue-600 justify-between p-4 pb-0 font-bold font-serif'>
             CampusHaven
-            <a className="text-black underline" href="/forgotpassword">Go Back</a>
+            <Link to="/forgotpassword" className="text-black underline">Go Back</Link>
             </div>
             <hr class="border-t border-gray-600"/>
     </div>
@@ -49,10 +50,10 @@ return (
   <p className="">Didn't receive code?</p>
   <div className="mt-36 mb-4">
   <button className="`mt-6 w-full p-3 text-white bg-orange-400  hover:bg-black rounded ">
-    <a href="/newpassword">Verify</a>
+    <Link to="/newpassword">Verify</Link>
   </button>
   </div>
-  <p className="pl-8 "> Not your email?  <a href="/forgotpassword">Edit to receive code</a></p>
+  <p className="pl-8 "> Not your email?<Link to="/forgotpassword">Edit to receive code</Link></p>
   </div>
   </div>
     </>

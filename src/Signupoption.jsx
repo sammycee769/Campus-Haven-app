@@ -1,10 +1,9 @@
 import React from 'react'
-import { CiMail } from "react-icons/ci";
+// import { CiMail } from "react-icons/ci";
 import { FaEnvelope, FaPhone, FaApple, FaFacebookF} from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import img from './assets/onboardings.png'
-
-
+import { Link } from 'react-router-dom'
 
 export default function Signupoption() {
   return (
@@ -12,7 +11,7 @@ export default function Signupoption() {
     <div className='m-4 mb-0'>
         <div className='flex text-blue-600 justify-between p-4 pb-0 font-bold font-serif'>
             CampusHaven
-            <a href="/login">Log in</a>
+            <Link to='/login'>Login</Link>
         </div>
         <hr class="border-t border-gray-600"/>
     </div>
@@ -29,7 +28,7 @@ export default function Signupoption() {
 
         <button className="flex items-center justify-center gap-2 w-full border border-blue-500 py-3 mb-4 rounded-md text-black h hover:bg-gray-300">
           <FaEnvelope className="text-blue-600"/>
-          <a href="/create_account"> Sign Up with your email</a>
+          <Link to="/create_account">Sign Up with your email</Link>
         </button>
 {/* 
         <button className="flex items-center justify-center gap-2 w-full border border-black py-3 mb-6 rounded-md text-black hover:bg-white">
@@ -60,7 +59,8 @@ export default function Signupoption() {
 
         <p className="text-black text-sm">
           Are you a <span className="font-semibold">LANDLORD/AGENT ?</span>{" "}
-          <span className="text-orange-500 font-semibold cursor-pointer"><a href="/landlordsignup">Sign Up</a></span>
+          <span className="text-orange-500 font-semibold cursor-pointer"> <Link to="/landlordsignup">Sign Up</Link>
+          </span>
         </p>
       </div>
     {/* </div> */}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Forgotpasword() {
   return (
@@ -6,8 +7,8 @@ export default function Forgotpasword() {
      <div className='m-4 mb-0'>
                 <div className='flex text-blue-600 justify-between p-4 pb-0 font-bold font-serif'>
                    CampusHaven
-                   <a className="text-black underline" href="/login">Go Back</a>
-                </div>
+                   <Link to='/login' className="text-black underline">Go Back</Link>
+                   </div>
                 <hr class="border-t border-gray-600"/>
     </div>
     <div className="flex flex-col items-center justify-center px-4">
@@ -30,7 +31,7 @@ export default function Forgotpasword() {
   <button className="`mt-6 w-full p-3 text-white bg-orange-400  hover:bg-black rounded "
   type="submit"
   >
-    <a href="/resetpassword">Next</a>
+    <Link to="/resetpassword">Next</Link>
   </button>
   </div>
     </div>

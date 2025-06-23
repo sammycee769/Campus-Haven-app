@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export default function ConfirmUpload() {
   const location = useLocation();
@@ -12,7 +13,7 @@ export default function ConfirmUpload() {
     <div className='m-4 mb-0'>
             <div className='flex text-blue-600 justify-between p-4 pb-0 font-bold font-serif'>
             CampusHaven
-            <a className="text-black underline" href="/upload-id">Go Back</a>
+            <Link to='/upload-id' className="text-black underline">Go Back</Link>
             </div>
             <hr class="border-t border-gray-600"/>
     </div>

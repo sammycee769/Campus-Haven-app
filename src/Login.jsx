@@ -1,7 +1,7 @@
 import { React,useState } from "react";
 import { FaEyeSlash, FaEye, FaApple, FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -21,13 +21,13 @@ export default function Login() {
                 <div className='flex text-blue-600 justify-between p-4 pb-0 font-bold font-serif'>
                    CampusHaven
                 </div>
-                <hr class="border-t border-gray-600"/>
+                <hr className="border-t border-gray-600"/>
     </div>
     <div className="min-h-screen flex flex-col items-center justify-center px-4">
           <div className="w-full max-w-md p-6 rounded-lg shadow-md">
             <h1 className="text-2xl font-bold text-gray-800 mb-1">Log in to your account</h1>
             <p className="mb-4 text-gray-700">
-              Don't have an account ? <span className="font-semibold text-orange-400 cursor-pointer"><a href="/create_account">Sign Up</a></span>
+              Don't have an account ? <span className="font-semibold text-orange-400 cursor-pointer"><Link to="/create_account">Sign Up</Link></span>
             </p>
     
             <label className="block font-semibold mb-1">Email Address</label>
@@ -68,7 +68,7 @@ export default function Login() {
             </span>
           </label>
         </div>
-        <span className="text-gray-800"><a href="/forgotpassword">Forgot password?</a> </span>
+        <span className="text-gray-800"> <Link to="/forgotpassword">Forgot password?</Link></span>
         <button
         onClick={handleClick} type="submit"
           className={"w-full mt-2 py-3 text-white rounded-md mb-4 bg-orange-400  hover:bg-gray-800" }
@@ -95,7 +95,7 @@ export default function Login() {
 
         <p className="text-black text-sm text-center mt-6">
           Are you a <span className="font-semibold">LANDLORD/AGENT ?</span>{" "}
-          <span className="text-orange-500 font-semibold cursor-pointer"><a href="/landlordsignup">Sign Up</a></span>
+          <span className="text-orange-500 font-semibold cursor-pointer"> <Link to="/landlordsignup">Sign Up</Link></span>
         </p>
       </div>
     </div>

@@ -23,6 +23,7 @@ import ManualLocation from './ManualLocation.jsx';
 import PropertyShowcase from './Propertylisting.jsx'
 import PropertyPost from './PostProperty.jsx'
 import Home from './Home.jsx'
+import Profile from './Profile.jsx'
 
 
 
@@ -52,6 +53,7 @@ export default function App() {
         <Route path="/showcase" element={<PropertyShowcase />} />
         <Route path="/postproperty" element={<PropertyPost />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
     </Routes>
   )
 }

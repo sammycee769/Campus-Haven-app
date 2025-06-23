@@ -1,8 +1,15 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { FiSearch, FiFilter, FiMessageCircle, FiPhone } from 'react-icons/fi';
-import { FaRegHeart } from 'react-icons/fa';
-import { MdLocationOn } from 'react-icons/md';
+// import { FaRegHeart } from 'react-icons/fa';
 import { BiHomeAlt } from 'react-icons/bi';
+import { GoLocation } from 'react-icons/go';
+// import { FiMessageCircle } from 'react-icons/fi';
+import { FaUserCircle,FaHeart } from 'react-icons/fa';
+
+import { MdLocationOn } from 'react-icons/md';
+// import { BiHomeAlt } from 'react-icons/bi';
 import img1 from './assets/unsplash_8e679XbGGy4.png';
 import img2 from './assets/unsplash_Faa_P3eaaGo.png';
 import img3 from './assets/unsplash_GWdZpXUPMs0.png';
@@ -49,6 +56,7 @@ const featuredListings = [
 ];
 
 export default function Home() {
+  // const navigate = useNavigate();
   const [showMore, setShowMore] = useState(false);
   const toggleShowMore = () => {
     setShowMore(prev => {
@@ -141,12 +149,22 @@ export default function Home() {
       </div>
 
       {/* Footer Nav */}
-      <div className="fixed bottom-0 left-0 right-0 flex justify-around items-center bg-white py-2 border-t">
-        <button className="flex flex-col items-center text-orange-500 text-sm"><BiHomeAlt />Home</button>
-        <button className="flex flex-col items-center text-gray-500 text-sm">🔍 Explore</button>
-        <button className="flex flex-col items-center text-gray-500 text-sm"><FaRegHeart />Favorite</button>
-        <button className="flex flex-col items-center text-gray-500 text-sm">💬 Messages</button>
-        <button className="flex flex-col items-center text-gray-500 text-sm">👤 Profile</button>
+      <div className="fixed bottom-0 left-0 right-0 flex justify-around items-center bg-white py-2 border-t text-sm">
+        <Link to="/home" className="flex flex-col items-center text-orange-500">
+          <BiHomeAlt className="text-lg" /> Home
+        </Link>
+        <Link to="/explore" className="flex flex-col items-center text-gray-500">
+          <GoLocation className="text-lg" /> Explore
+        </Link>
+        <Link to="/favorites" className="flex flex-col items-center text-gray-500">
+          <FaHeart className="text-lg" /> Favorite
+        </Link>
+        <Link to="/messages" className="flex flex-col items-center text-gray-500">
+          <FiMessageCircle className="text-lg" /> Messages
+        </Link>
+        <Link to="/profile" className="flex flex-col items-center text-gray-500">
+          <FaUserCircle className="text-lg" /> Profile
+        </Link>
       </div>
     </div>
   );

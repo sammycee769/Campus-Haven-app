@@ -1,10 +1,18 @@
 import { React,useState } from "react";
 import { FaEyeSlash, FaEye, FaApple, FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [agreed, setAgreed] = useState(false);
+  const handleClick = (e) => {
+    e.preventDefault(); 
+    alert("Login Successfully!");
+    navigate("/home");
+  };
+  
 
   const togglePassword = () => setShowPassword(!showPassword);
   return (
@@ -62,9 +70,10 @@ export default function Login() {
         </div>
         <span className="text-gray-800"><a href="/forgotpassword">Forgot password?</a> </span>
         <button
+        onClick={handleClick} type="submit"
           className={"w-full mt-2 py-3 text-white rounded-md mb-4 bg-orange-400  hover:bg-gray-800" }
         >
-          Next
+          Login
         </button>
 
         <div className="flex items-center justify-center gap-4 text-gray-600 mb-4">

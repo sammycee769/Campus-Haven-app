@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FiSearch, FiFilter, FiMessageCircle, FiPhone } from 'react-icons/fi';
 // import { FaRegHeart } from 'react-icons/fa';
 import { BiHomeAlt } from 'react-icons/bi';
@@ -54,25 +54,13 @@ const featuredListings = [
     verified: true, listed: '3 days ago', image: img8, user: 'Mr Raji Adegoke'
   },
 ];
-
 export default function Home() {
-  // const navigate = useNavigate();
   const [showMore, setShowMore] = useState(false);
-  const toggleShowMore = () => {
-    setShowMore(prev => {
-      const next = !prev;
-      if (next) {
-        setTimeout(() => {
-          document.getElementById("recent-scroll")?.scrollTo({
-            left: 9999,
-            behavior: "smooth"
-          });
-        }, 100);
-      }
-      return next;
-    });
-  };
+  const navigate = useNavigate();
 
+  const handleListingClick = (item) => {
+    navigate(`/listing/${item.id}`, { state: item });
+  };
 
   return (
     <div className="p-4 pb-24 bg-gray-50 min-h-screen">
@@ -92,20 +80,16 @@ export default function Home() {
       <h2 className="text-lg font-semibold mb-1">Rent Your Dream Hostel</h2>
       <p className="text-sm text-gray-600 mb-4">Easily connect with Landlords/Agents in your preferred location</p>
 
-        {/* Recents */}
-        <div className="flex justify-between items-center mb-2">
+      {/* Recents */}
+      <div className="flex justify-between items-center mb-2">
         <h3 className="font-semibold">Recents</h3>
-        <button onClick={toggleShowMore} className="text-sm text-orange-500">
+        <button onClick={() => setShowMore(prev => !prev)} className="text-sm text-orange-500">
           {showMore ? 'See less' : 'See more'}
         </button>
       </div>
-
-      <div id="recent-scroll" className="overflow-x-auto flex gap-4 scroll-smooth pb-2">
+      <div className="overflow-x-auto flex gap-4 scroll-smooth pb-2">
         {[...recentListings, ...(showMore ? extraListings : [])].map(item => (
-          <div
-            key={item.id}
-            className="min-w-[200px] border rounded p-2 flex-shrink-0 bg-white shadow hover:shadow-lg hover:scale-[1.02] transition-all duration-200"
-          >
+          <div key={item.id} onClick={() => handleListingClick(item)} className="min-w-[200px] border rounded p-2 flex-shrink-0 bg-white shadow cursor-pointer">
             <img src={item.image} alt={item.title} className="w-full h-24 object-cover rounded mb-1" />
             <p className="text-sm font-medium">{item.title}</p>
             <p className="text-blue-600 font-bold">N {item.price}</p>
@@ -114,12 +98,11 @@ export default function Home() {
         ))}
       </div>
 
-
       {/* Featured */}
       <h3 className="font-semibold mb-2 mt-6">Featured</h3>
       <div className="space-y-6">
         {featuredListings.map(item => (
-          <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:scale-[1.01]">
+          <div key={item.id} onClick={() => handleListingClick(item)} className="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:scale-[1.01] cursor-pointer">
             <img src={item.image} alt={item.title} className="w-full h-40 object-cover" />
             <div className="p-4 space-y-2">
               <div className="flex justify-between items-start">
@@ -147,6 +130,7 @@ export default function Home() {
           </div>
         ))}
       </div>
+
 
       {/* Footer Nav */}
       <div className="fixed bottom-0 left-0 right-0 flex justify-around items-center bg-white py-2 border-t text-sm">

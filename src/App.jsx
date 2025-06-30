@@ -24,6 +24,7 @@ import PropertyShowcase from './Propertylisting.jsx'
 import PropertyPost from './PostProperty.jsx'
 import Home from './Home.jsx'
 import Profile from './Profile.jsx'
+import ListingDetail  from './Listing.jsx'
 
 
 
@@ -54,6 +55,8 @@ export default function App() {
         <Route path="/postproperty" element={<PropertyPost />} />
         <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/listing/:id" element={<ListingDetail />} />
+
     </Routes>
   )
 }

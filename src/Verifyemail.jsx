@@ -1,8 +1,14 @@
 import React, { useRef } from "react";
-import { Link } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 
 export default function Verifyphone() {
-    const inputsRef = useRef([]);
+const navigate = useNavigate();
+const handleClick = (e) => {
+    e.preventDefault(); 
+    alert("Verified!");
+    navigate("/home");
+  };
+const inputsRef = useRef([]);
 
 const handleChange = (e, index) => {
   const value = e.target.value;
@@ -48,9 +54,12 @@ return (
   </div>
   <p className="">Didn't receive code?</p>
   <div className="mt-36 mb-4">
-  <button className="`mt-6 w-full p-3 text-white bg-orange-400  hover:bg-black rounded ">
-    <Link to="">Verify</Link>
-  </button>
+   <button
+        onClick={handleClick} type="submit"
+          className={"`mt-6 w-full p-3 text-white bg-orange-400  hover:bg-black rounded "}
+        >
+          Verify
+        </button>
   </div>
   <p className="pl-8 "> Not your email? <Link to="/create_account">Edit to receive code</Link></p>
   </div>

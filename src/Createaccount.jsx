@@ -44,7 +44,7 @@ const RegisterForm = () => {
       <div className="w-full max-w-md p-6 rounded-lg shadow-md">
         <h1 className="text-2xl font-bold text-gray-800 mb-1">Create your account</h1>
         <p className="mb-4 text-gray-700">
-          Already have an account ? <span className="font-semibold text-orange-400  cursor-pointer"><Link to="/login">Login in</Link></span>
+          Already have an account ? <span className="font-semibold text-orange-400  cursor-pointer"><Link to="/login">Login</Link></span>
         </p>
 
         <label className="block font-semibold mb-1">Email Address</label>

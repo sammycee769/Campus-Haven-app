@@ -51,7 +51,7 @@ return (
   <p className="">Didn't receive code?</p>
   <div className="mt-36 mb-4">
   <button className="`mt-6 w-full p-3 text-white bg-orange-400  hover:bg-black rounded ">
-  <Link to="">Verify</Link>
+  <Link to="/verifyidentity">Verify</Link>
   </button>
   </div>
   <p className="pl-8 "> Not your email? <Link to="/create_account">Edit to receive code</Link></p>

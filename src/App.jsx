@@ -28,6 +28,10 @@ import Explore from './Explore.jsx'
 import Favorite from './Favorite.jsx'
 import Messages from './Messages.jsx'
 import ListingDetail  from './Listing.jsx'
+import Notifications from './Notifications.jsx';
+import ListingManagement from './ListingManagement.jsx';
+import About from './About.jsx';
+import NeedHelp from './NeedHelp.jsx';
 
 
 
@@ -62,6 +66,10 @@ export default function App() {
         <Route path="/favorites" element={<Favorite />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/listing/:id" element={<ListingDetail />} />
+        <Route path="/notifications" element={<Notifications />} />
+        <Route path="/listing-management" element={<ListingManagement />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/need-help" element={<NeedHelp />} />
 
     </Routes>
   )

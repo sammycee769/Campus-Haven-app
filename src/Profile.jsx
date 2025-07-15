@@ -7,8 +7,10 @@ import { BiHomeAlt } from 'react-icons/bi';
 import { GoLocation } from 'react-icons/go';
 import { FiMessageCircle } from 'react-icons/fi';
 import { FaUserCircle } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 export default function Profile() {
+   const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
       {/* Header */}
@@ -33,7 +35,7 @@ export default function Profile() {
           </div>
         </Link>
 
-        <Link to="/listings" className="flex items-center justify-between py-4">
+        <Link to="/listing-management" className="flex items-center justify-between py-4">
           <div className="flex items-center gap-3 text-gray-800">
             <MdManageAccounts className="text-xl text-blue-500" /> Listing management
           </div>
@@ -45,13 +47,13 @@ export default function Profile() {
           </div>
         </Link>
 
-        <Link to="/help" className="flex items-center justify-between py-4">
+        <Link to="/need-help" className="flex items-center justify-between py-4">
           <div className="flex items-center gap-3 text-gray-800">
             <FaQuestionCircle className="text-xl text-blue-500" /> Need help?
           </div>
         </Link>
 
-        <button className="flex items-center gap-3 py-4 text-red-600 font-medium">
+        <button onClick={() => navigate('/login')} className="flex items-center gap-3 py-4 text-red-600 font-medium">
           <FiLogOut className="text-xl" /> Log out
         </button>
       </div>

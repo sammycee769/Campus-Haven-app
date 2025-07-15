@@ -43,10 +43,10 @@ export default function ListingDetail() {
       </div>
 
       <div className="flex space-x-4">
-        <button className="bg-blue-600 text-white px-4 py-2 rounded flex items-center">
+        <button onClick={() => navigate('/messages')} className="bg-blue-600 text-white px-4 py-2 rounded flex items-center">
           <FiMessageCircle className="mr-2" /> Message
         </button>
-        <button className="bg-green-600 text-white px-4 py-2 rounded flex items-center">
+        <button onClick={() => window.location.href = 'tel:+2348123456789'} className="bg-green-600 text-white px-4 py-2 rounded flex items-center">
           <FiPhone className="mr-2" /> Call
         </button>
       </div>

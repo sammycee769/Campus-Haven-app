@@ -54,6 +54,17 @@ const featuredListings = [
     id: 8, title: 'Flat', price: '650,000/year', location: 'Alapere, Ikorodu', beds: 2, baths: 1,
     verified: true, listed: '4 days ago', image: img8, user: 'Ms Halimat Abdul'
   },
+  { id: 3, title: 'Studio apartment with kitchen', price: '300,000', location: 'Amalete, Alimosho',beds: 2, baths: 1,
+    verified: true, listed: '4 days ago', image: img3 , user: 'Ms Bisi Amad'},
+  { id: 9, title: 'Studio apartment with kitchen and toilet', price: '500,000', location: 'Semete, Ikorodu',beds: 2, baths: 1,
+    verified: true, listed: '4 days ago', image: img5 ,  user: 'Mrs Kosi Okoro'},
+  { id: 10, title: 'Studio apartment ', price: '200,000', location: 'Oloyi, Ikate',beds: 2, baths: 2,
+    verified: true, listed: '4 days ago', image: img8 ,  user: 'Ms Halimat Abdul'},
+  { id: 11, title: '1 Bedroom Apartment', price: '300,000', location: 'Allen, Ikeja',beds: 2, baths: 2,
+    verified: true, listed: '4 days ago', image: img7, user: 'Ms Halimat Abdul' },
+  { id: 12, title: 'Studio apartment with kitchen', price: '300,000', location: 'Akoka, Yaba',beds: 4, baths: 2,
+    verified: true, listed: '4 days ago', image: img6 ,  user: 'Ms Halimat Abdul'},
+
 ];
 
 export default function Home() {
